@@ -112,6 +112,7 @@
   }
 
   .body1 {
+    /* display: flex; */
     height: 30vh;
     width: 41vw;
     border-radius: 20px;
@@ -119,6 +120,27 @@
     box-shadow: 0 0 2px gray;
     background-color: white;
   }
+  .donutchart{
+    height: 100%;
+    width: 50%;
+  }
+  .body1-tag{
+    margin-left: 30px;
+    height: 15%;
+    width: 100%;
+  }
+  .donutchart-header{
+    height: 80%;
+    display: flex;
+  }
+  .donutchart-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+  }
+
   .body2 {
     height: 30vh;
     width: 41vw;
@@ -127,6 +149,13 @@
     box-shadow: 0 0 2px gray;
     background-color: white;
   }
+  .button-style{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .formname{
     display: flex;
     align-items: center;

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 import { IconContext } from 'react-icons';
 import * as FaIcons from 'react-icons/fa';
+import * as FcIcons from 'react-icons/fc';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 
@@ -10,41 +11,35 @@ const Sidebar = () => {
 
     const SidebarData = [
         {
-          title: 'Home',
-          path: '/',
+          title: 'Dashboard',
+          path: '/home',
           icon: <AiIcons.AiFillHome />,
           cName: 'nav-text'
         },
         {
-          title: 'Reports',
+          title: "Transactions",
           path: '/reports',
           icon: <IoIcons.IoIosPaper />,
           cName: 'nav-text'
         },
         {
-          title: 'Products',
+          title: "Schedules",
           path: '/products',
           icon: <FaIcons.FaCartPlus />,
           cName: 'nav-text'
         },
         {
-          title: 'Team',
+          title: "Users",
           path: '/team',
           icon: <IoIcons.IoMdPeople />,
           cName: 'nav-text'
         },
         {
-          title: 'Messages',
+          title: "Settings",
           path: '/messages',
           icon: <FaIcons.FaEnvelopeOpenText />,
           cName: 'nav-text'
         },
-        {
-          title: 'Support',
-          path: '/support',
-          icon: <IoIcons.IoMdHelpCircle />,
-          cName: 'nav-text'
-        }
       ];
 
     const [sidebar, setSidebar] = useState(false);

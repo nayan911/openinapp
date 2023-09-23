@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "../styles/LayoutStyles.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
 import Chartgrapg from "../Pages/Chartgrapg";
 import DonutChart from "../Pages/DonutChart";
 import Poppup from "./Poppup";
-import {BsJustify} from 'react-icons/bs'
 import Sidebar from "./Sidebar";
+import * as AiIcons from 'react-icons/ai';
+import {data} from './Data.js'
+import * as FaIconss from 'react-icons/fa';
 
 const Layout = () => {
 
@@ -59,13 +60,6 @@ const Layout = () => {
     iid: "",
     yt: ""
   });
-
-  // const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
-
-  //   const OpenSidebar = () => {
-  //       console.log(openSidebarToggle)
-  //     setOpenSidebarToggle(!openSidebarToggle)
-  //   }
 
   return (
     <>
@@ -159,8 +153,24 @@ const Layout = () => {
                 </div>
                 <div className="bodyheader">
                     <div className="body1 headerbox">
-                        <DonutChart/>
-                    </div>
+                          <div className="body1-tag"><h3>Top Products</h3></div>
+                          <div className="donutchart-header">
+                            <div className="donutchart">
+                              <DonutChart/>
+                            </div>
+                            <div className="donutchart-data">
+                              <div className="donutchart-data-style">
+                              {data.map((entry, index) => (
+                                <div key={index}>
+                                  <span style={{ fontWeight: 'bold' }}><FaIconss.FaRegCircle style={{margin: 10,backgroundColor: `${entry.color}`,color: `${entry.color}`,borderRadius: '30px'}}/>{entry.name}</span>
+                                  <br />
+                                  <span style={{ fontWeight: 'lighter' }}>{(entry.value / 12).toFixed(2)}%</span>
+                                </div>
+                              ))}
+                              </div>
+                            </div>
+                          </div>
+                      </div>
                     <div className="body2 headerbox">
                         {formvalue.name ? (
                           <div style={{padding: 10}}>
@@ -189,9 +199,11 @@ const Layout = () => {
                               </div>
                           </div>
                         ) : (
-                          <button onClick={() => setopenpopup(true)}>
-                            click here
-                          </button>
+                          <div className="button-style">
+                              <button onClick={() => setopenpopup(true)}>
+                                <AiIcons.AiOutlinePlus style={{fontSize: '50px'}}/>
+                              </button>
+                          </div>
                         )}
                     </div>
                 </div>
