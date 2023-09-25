@@ -207,7 +207,7 @@
 }
 
 .headerfirst{
-    justify-content: center;
+  justify-content: center;
 }
 
 .header-content {
@@ -294,5 +294,14 @@
     }
     .donutchart{
       width: 70%;
+    }
+    .body1-tag{
+      margin-left: 1px;
+    }
+    .form-control{
+      display: none;
+    }
+    .rounded{
+      display: none;
     }
   }
