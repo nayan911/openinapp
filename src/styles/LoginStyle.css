@@ -114,8 +114,10 @@
 }
 
 @media screen and (max-width: 1110px) {
-    
     .formstyle{
+        width: 80%;
+    }
+    .form-list{
         width: 80%;
     }
   }
