@@ -47,6 +47,9 @@
     align-items: center;
 }
 
+.formstyle1{
+    display: none;
+}
 .formstyle{
     background-color: #F8FAFF;
     width: 80%;
@@ -62,7 +65,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
 }
 
 .form-sign{
@@ -116,7 +119,17 @@
     }
     
     .formstyle{
+        display: none;
+    }
+    .formstyle1{
+        background-color: #F8FAFF;
         width: 100%;
         height: 100%;
+        display: flex;
+        justify-content: center; 
+         align-items: center;
+    }
+    .formlist1{
+        width: 70%;
     }
   }
