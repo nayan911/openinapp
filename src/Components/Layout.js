@@ -173,11 +173,11 @@ const Layout = () => {
                       </div>
                     <div className="body2 headerbox">
                         {formvalue.name ? (
-                          <div style={{padding: 10}}>
+                          <div className="body2-style" style={{padding: 10}}>
                               <div>
                                 <h1>{formvalue.name}</h1>
                               </div>
-                              <div className="formname" style={{padding: 40}}>
+                              <div className="formname">
                                       <div>
                                           <i className="fa-brands fa-whatsapp" style={{color: '#3CC952'}}></i>
                                           <span>{" "}{formvalue.phone}</span>
@@ -187,7 +187,7 @@ const Layout = () => {
                                           <span>{" "}{formvalue.iid}</span>
                                       </div>
                               </div>
-                              <div className="formname" style={{padding: 40}}>
+                              <div className="formname formname1">
                                       <div>
                                             <i className="fa-regular fa-envelope" style={{color: '#FF4E64'}}></i>
                                             <span>{" "}{formvalue.email}</span>

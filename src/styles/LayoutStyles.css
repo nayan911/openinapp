@@ -149,6 +149,10 @@
     box-shadow: 0 0 2px gray;
     background-color: white;
   }
+  .body2-style{
+    height: 100%;
+    width: 100%;
+  }
   .button-style{
     height: 100%;
     display: flex;
@@ -160,6 +164,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
+  }
+  .formname1{
+    margin-top: 20px;
   }
 
   .menu {
@@ -266,5 +274,12 @@
   
     .menu-dashboard{
       display: none;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+  
+    .formname{
+      padding: 10px;
     }
   }
