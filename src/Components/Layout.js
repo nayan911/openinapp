@@ -20,7 +20,7 @@ const Layout = () => {
   const handleLogout=()=>{
     localStorage.clear();
     message.success("logout success");
-    navigate('/login');
+    navigate('/');
   }
 
   const SidebarMenu = [
@@ -83,7 +83,7 @@ const Layout = () => {
               })}
               <div className={`menu-item `} onClick={handleLogout}>
                 <i className="fa-solid fa-right-from-bracket"></i>
-                <Link to="/login">Logout</Link>
+                <Link to="/">Logout</Link>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ const Layout = () => {
                 <div className="headerup">
                     <div className="headerfirst" style={{fontSize: 20}}>
                       <span className='menu-icon'><Sidebar/></span>
-                        <b>DashBoard</b>
+                        <b className="menu-dashboard">DashBoard</b>
                     </div>
                     <div className="header-content" style={{cursor: "pointer"}}>
                         <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
@@ -164,7 +164,7 @@ const Layout = () => {
                                 <div key={index}>
                                   <span style={{ fontWeight: 'bold' }}><FaIconss.FaRegCircle style={{margin: 10,backgroundColor: `${entry.color}`,color: `${entry.color}`,borderRadius: '30px'}}/>{entry.name}</span>
                                   <br />
-                                  <span style={{ fontWeight: 'lighter' }}>{(entry.value / 12).toFixed(2)}%</span>
+                                  <span className="value-style" style={{ fontWeight: 'lighter' }}>{(entry.value / 12).toFixed(2)}%</span>
                                 </div>
                               ))}
                               </div>
@@ -200,7 +200,7 @@ const Layout = () => {
                           </div>
                         ) : (
                           <div className="button-style">
-                              <button onClick={() => setopenpopup(true)}>
+                              <button className="button-border" onClick={() => setopenpopup(true)}>
                                 <AiIcons.AiOutlinePlus style={{fontSize: '50px'}}/>
                               </button>
                           </div>

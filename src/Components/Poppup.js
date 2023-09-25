@@ -29,15 +29,15 @@ const Poppup = (props) => {
                         <form>
                             <div class="mb-3">
                               <label for="name" class="form-label">Enter Name*</label>
-                              <input type='text' class="form-control" name='name' value={formvalue.name} onChange={handleChange}></input>
+                              <input type='text' class="form-control" name='name' value={formvalue.name} onChange={handleChange} placeholder='Eg. John Doe'></input>
                             </div>
                             <div class="mb-3">
                               <label for="email" class="form-label">Enter Email*</label>
-                              <input type='email' class="form-control" name='email' value={formvalue.email} onChange={handleChange}></input>
+                              <input type='email' class="form-control" name='email' value={formvalue.email} onChange={handleChange} placeholder='Eg. John@xyz.com'></input>
                             </div>
                             <div class="mb-3">
                               <label for="phone" class="form-label">Enter Phone*</label>
-                              <input type='text' class="form-control" name='phone' value={formvalue.phone} onChange={handleChange}></input>
+                              <input type='text' class="form-control" name='phone' value={formvalue.phone} onChange={handleChange} placeholder='Eg. 9999999999'></input>
                             </div>
                         </form>
 }                     
@@ -46,12 +46,12 @@ const Poppup = (props) => {
                       {
                         <form onSubmit={handleSubmit}>
                             <div class="mb-3">
-                              <label for="iid" class="form-label">Insta ID*</label>
-                              <input type='text' class="form-control" name='iid' value={formvalue.iid} onChange={handleChange}></input>
+                              <label for="iid" class="form-label">Instagram Link<span style={{fontWeight: 'lighter'}}>(Optional)</span></label>
+                              <input type='text' class="form-control" name='iid' value={formvalue.iid} onChange={handleChange} placeholder='Eg. .instagram.com/username'></input>
                             </div>
                             <div class="mb-3">
-                              <label for="yt" class="form-label">Youtube ID*</label>
-                              <input type='text' class="form-control" name='yt' value={formvalue.yt} onChange={handleChange}></input>
+                              <label for="yt" class="form-label">Youtube Link<span style={{fontWeight: 'lighter'}}>(Optional)</span></label>
+                              <input type='text' class="form-control" name='yt' value={formvalue.yt} onChange={handleChange} placeholder='Eg. .youtube/username'></input>
                             </div>
                             <button type="submit" class="btn btn-primary" onClick={()=>setopenpopup(false)}>Done</button>
                       </form>

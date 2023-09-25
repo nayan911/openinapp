@@ -222,6 +222,17 @@
     text-transform: uppercase;
   }
 
+  .button-border{
+    border-radius: 30px;
+    color: #999CA0;
+  }
+
+  .value-style{
+    width: 100%;
+    margin-left: 50px;
+    font-weight: lighter;
+  }
+
   @media screen and (max-width: 1465px) {
   
     .sidebar {
@@ -248,5 +259,12 @@
     /* Adjust the width of header boxes when wrapped (e.g., 50% for two boxes per row) */
     .headerbox {
       width: 100%; /* Adjust as needed based on the desired number of boxes per row */
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+  
+    .menu-dashboard{
+      display: none;
     }
   }

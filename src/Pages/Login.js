@@ -1,11 +1,13 @@
 import { Form, Input} from 'antd'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "../styles/LoginStyle.css";
 import { IconContext } from 'react-icons';
 import * as FaIcons from 'react-icons/fc';
 import * as FaIconss from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
+import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
+
 
 const Login = () => {
 
@@ -35,15 +37,23 @@ const Login = () => {
         <div className="formstyle">
           <div className='form-list'>
             <div className='form-text'>
-              Sign In
+              <span className='form-text-signin'>Sign In</span><br></br>
+              <span className='form-text-signin-account'>Sign in to your account</span>
             </div>
             <div className='form-sign'>
-                <div className='formgoogle'>
-                  <FaIcons.FcGoogle style={{fontSize: '20'}} /> Sign in with google
-                </div>
-                <div className='formapple'>
+            <GoogleOAuthProvider clientId="540670254248-n1d3qq95rh7t8li46njsu5m2hkkv5ndo.apps.googleusercontent.com">
+                <GoogleLogin 
+                  onSuccess={credentialResponse => {
+                    navigate('/home')
+                  }}
+                  onError={() => {
+                    console.log('Login Failed');
+                  }}
+                />
+            </GoogleOAuthProvider>
+                <button className='formapple'>
                   <AiIcons.AiFillApple style={{fontSize: '40'}} /> sign in with apple
-                </div>
+                </button>
             </div>
             <div className='form-values'>
                 <Form layout="vertical" onFinish={onfinishHandler}>
