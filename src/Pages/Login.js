@@ -52,7 +52,7 @@ const Login = () => {
                 />
             </GoogleOAuthProvider>
                 <button className='formapple'>
-                  <AiIcons.AiFillApple style={{fontSize: '40'}} /> sign in with apple
+                  <AiIcons.AiFillApple style={{fontSize: '15'}} /> sign in with apple
                 </button>
             </div>
             <div className='form-values'>
